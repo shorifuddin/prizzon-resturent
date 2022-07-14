@@ -31,6 +31,11 @@ Route::get('reservation', [WebsiteController::class, 'reservation'])->name('rese
 Route::get('about', [WebsiteController::class, 'about'])->name('about');
 Route::get('contact', [WebsiteController::class, 'contact'])->name('contact');
 Route::get('menu', [WebsiteController::class, 'menu'])->name('menu');
+Route::get('login', [WebsiteController::class, 'admin_login'])->name('login');
+Route::get('/register', [WebsiteController::class, 'admin_register'])->name('register');
+Route::post('/login', [WebsiteController::class, 'login_access'])->name('login_access');
+Route::post('/register_access', [WebsiteController::class, 'register_access'])->name('register_access');
+Route::get('/recycle', [WebsiteController::class, 'recycle'])->name('recycle');
 
 // <<===== ADMIN ROUTE LIST ======>>
 Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');

@@ -239,14 +239,14 @@
                         @endif
 
                         <li class="side-nav-title side-nav-item">Custom</li>
-
+                        @if(Auth::user()->role=='1' || Auth::user()->role=='2')
                         <li class="side-nav-item">
                             <a href="{{ route('recycle') }}" class="side-nav-link">
                                 <i class="uil-trash-alt"></i>
                                <span> Recycle </span>
                             </a>
                         </li>
-
+                        @endif
                         <li class="side-nav-item">
                             <a href="{{ route('/') }}" target="_blank" class="side-nav-link">
                                 <i class="uil-globe"></i>
